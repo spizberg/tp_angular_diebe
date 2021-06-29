@@ -1,0 +1,15 @@
+:host {
+    grid-area: header;
+    background-color: var(--main-blue);
+    font-size: 24px;
+    font-weight: 500;
+    padding: 20px;
+    color: #fff;
+   
+    .logout{
+        display: inline;
+        cursor: pointer;
+
+    }
+}
+

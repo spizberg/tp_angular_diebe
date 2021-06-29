@@ -1,0 +1,63 @@
+
+   <div style="text-align: center; " class="p-5">
+    
+    <div id="carouselExampleControls" class="carousel slide mb-2" data-ride="carousel">
+      <div *ngIf="saleAd.illustrations.length > 0" class="carousel-inner">
+        <div   *ngFor="let illustration of saleAd.illustrations; let i = index" 
+        [ngClass]="{'active': i==1}" class="carousel-item">
+          <img  height="100" width="100" src="{{illustration.url}}" alt="First slide">
+<!--           <i  class="fa fa-trash ml-4 mt-2 delete-icon" id="i-delete"></i>
+ -->
+        </div>
+       
+      </div>
+      <a (click)="previousImage()" class="carousel-control-prev" role="button" data-slide="prev">
+        <span style="background-color: black;" class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span> 
+      </a>
+      <a (click)="nextImage()" class="carousel-control-next" role="button" data-slide="next">
+        <span style="background-color: black;" class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span  class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <div class="form-group">
+      <label>Title</label>
+      <input class="form-control" type="text" placeholder="Username" name="username" [(ngModel)]="saleAd.title" />
+    </div>
+    <div class="form-group">
+      <label>Description</label>
+      <input class="form-control" type="text" placeholder="Password" [(ngModel)]="saleAd.description" />    </div>
+    <div class="form-group">
+      <label>Price</label>
+      <input style="text-align: center;" class="form-control" type="number" placeholder="Password"  [(ngModel)]="saleAd.price" />  
+      </div>
+
+      <div *ngIf="listOfUrlToView.length > 0"  class="row ">
+         
+        <div *ngFor="let url of listOfUrlToView; let i=index" class="m-2">
+        <img  height="70" width="70" src="{{url}}" alt="First slide">
+        <i (click)="deleteUrlToList(i)" class="fa fa-trash mr-7 mt-2 delete-icon" id="i-delete"></i>
+       </div> 
+      
+     
+      </div>
+
+      <div class="form-group" style="width: 4em;">
+        <label for="exampleFormControlFile1">Illustrations</label>
+    
+        <input multiple (change)="onFileChange($event)" 
+        #fileInput type="file" class="form-control-file" id="exampleFormControlFile1">
+
+      </div>
+
+        <!-- <label></label>
+        <div  class="m-3" >
+          
+            <i  class="fa fa-trash mr-7 mt-2 delete-icon" id="i-delete"></i>
+        </div>
+        <input  type="file"  />  --> 
+ 
+     <button class="btn btn-success mt-5" (click)=onModify()>Enregistrer</button>
+ 
+   </div>

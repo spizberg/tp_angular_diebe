@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --main-blue: #2196f3;
+    --grey-bg: #cfd8dc;
+    --light-grey-bg: #f8f8f8;
+    --text-dark: #212121;
+    --input-background: #f1f5f7;
+    --main-blue-light: #219bf8;
+
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: white;
+}
+
+footer, header {
+    padding: 20px;
+}
+
+
+header {
+    grid-area: header;
+    background-color: var(--main-blue);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+
+#ad-list
+{
+    background-color: var(--light-grey-bg);
+}
+#ad-list .ad-element img { 
+    height: 100%; width: 33%; 
+    background-color: var(--grey-bg); 
+    border-bottom-left-radius: 3px; 
+    border-top-left-radius: 3px; }
+#ad-list .ad-element
+{
+    color: var(--text-dark);
+    background-color: white;
+    display: flex;
+    margin: 10px 10px 0 10px;
+    height: 150px;
+    border-radius: 3px;
+}
+
+.ad-details
+{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.ad-details .ad-title { font-weight: 500; margin-bottom: 5px; }
+.ad-details .ad-description {  margin-bottom: 5px; flex-grow: 1; font-size: 14px; font-weight: 300;}
+.ad-details .ad-last-line { display: flex; justify-content: space-between; }
+.ad-details .ad-last-line .ad-date { font-size: 12px; align-self: flex-end; font-weight: 300; }
+.ad-details .ad-last-line .ad-price { font-weight: 500; }
+

@@ -1,0 +1,24 @@
+
+nav {
+    background-color: var(--main-blue);
+    display: flex;
+    justify-content: space-between;
+    color: white !important;
+}
+section {
+    grid-area: main;
+    background-color: var(--light-grey-bg);
+}
+
+nav .nav-element {
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+}
+nav .nav-element.active {
+     background-color: var(--main-blue-light) !important;
+ }
+
+.ad-date { font-size: 12px; align-self: flex-end; font-weight: 300; }
+.ad-price { font-weight: 500; }

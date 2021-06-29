@@ -1,0 +1,18 @@
+    <div class="ad-element">
+        <img
+             src="{{saleAd.illustrations[0].url}}" />
+        <div class="ad-details">
+            <div class="ad-title">{{saleAd.title}}</div>
+            <div class="ad-description">{{saleAd.description}}</div>
+            <div class="ad-last-line">
+                <div class="ad-date">{{saleAd.lastUpdated| date}} </div>
+                <div class="ad-price">{{saleAd.price}} €</div>
+
+
+            </div>
+            <div class="actions">
+                <div (click)="onCheckDetails(saleAd)"  class="details"><a>Détails</a></div>
+                <div (click)="onModifySaleAd(saleAd)"  class="details"><a>Modifier</a></div>
+                <div (click)="onDeleteSaleAd(saleAd)"  class="details"><a >Supprimer</a></div>
+            </div>
+     </div>

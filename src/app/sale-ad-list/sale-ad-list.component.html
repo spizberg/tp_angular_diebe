@@ -1,0 +1,17 @@
+<section>
+    <nav>
+        <div class="nav-element active">
+            ALL ADS
+        </div>
+        <div class="nav-element">
+            MY ADS
+        </div>
+    </nav>
+    <div id="ad-list">
+       
+        <app-sale-ad-detail *ngFor="let saleAd of saleAdList" 
+        [saleAd]="saleAd" 
+        (deleteOutPutSucess)="handleDeleteSuccess($event)"></app-sale-ad-detail>
+    </div>
+
+</section>

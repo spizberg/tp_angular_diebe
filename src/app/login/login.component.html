@@ -1,0 +1,15 @@
+<div class="grey-bg">
+    <div class="message-container">
+        <img src="assets/2098873.svg" alt="profile-picture" height="100px" width="100px"/>
+        <p><span class="bigger">Welcome !</span><br/>Please sign in to access content !</p>
+    </div>
+</div>
+<div class="light-grey-bg">
+    <input type="text" placeholder="Username" name="username" [(ngModel)]="username" />
+    <input type="password" placeholder="Password" name="password" [(ngModel)]="password" />
+
+    <div *ngIf='loginFailed' class="login-message alert alert-danger">
+        {{ message }}
+    </div>
+    <button (click)=handleLogin()>Sign in</button>
+</div>
